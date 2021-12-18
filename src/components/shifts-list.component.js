@@ -6,13 +6,14 @@ export default class ShiftsList extends Component {
 
     this.state = {
       firstName: '',
+      lastName: ''
     }
   }
 
   render() {
     return (
       <div>
-        <h3>Shifts</h3>
+        <h3>{this.state.firstName} {this.state.lastName} Shifts</h3>
         <table className="table">
           <thead className="thead-light">
             <tr>
