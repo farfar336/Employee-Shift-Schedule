@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import { Link } from 'react-router-dom';
 import axios from 'axios';
 
 // Used to hold employee variables
@@ -8,6 +9,9 @@ const Employee = props => (
     <td>{props.employee.firstName}</td>
     <td>{props.employee.lastName}</td>
     <td>{props.employee.position}</td>
+    <td>
+      <Link to={"/shift/"+props.employee._id}>View Shifts</Link>
+    </td>
   </tr>
 )
 
@@ -46,6 +50,7 @@ export default class EmployeesList extends Component {
                 <th>First Name</th>
                 <th>Last Name</th>
                 <th>Position</th>
+                <th>Action</th>
               </tr>
             </thead>
             <tbody>
