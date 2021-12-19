@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+// import axios from 'axios';
 
 export default class ShiftsList extends Component {
   constructor(props) {
@@ -6,14 +7,13 @@ export default class ShiftsList extends Component {
 
     this.state = {
       firstName: '',
-      lastName: ''
     }
   }
 
   render() {
     return (
       <div>
-        <h3>{this.state.firstName} {this.state.lastName} Shifts</h3>
+        <h3>{this.state.firstName} Shifts</h3>
         <table className="table">
           <thead className="thead-light">
             <tr>
@@ -25,7 +25,7 @@ export default class ShiftsList extends Component {
           </thead>
           <tbody>
               {/* { this.employeeList() } */}
-              Body
+              {/* Body */}
             </tbody>
         </table>
       </div>
