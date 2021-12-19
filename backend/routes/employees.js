@@ -12,11 +12,11 @@ router.route('/').get((req, res) => {
     .catch(err => res.status(400).json('Error: ' + err));
 });
 
-//Gets info for a specific ID
-// router.route('/:id').get((req, res) => {
-//   Employee.findById(req.params.id) //Finds the specific ID
-//     .then(employee => res.json(employee)) //Return entry as json 
-//     .catch(err => res.status(400).json('Error: ' + err)); //Else return error
-// });
+// Gets info for a specific ID
+router.route('/:id').get((req, res) => {
+  Employee.findById(req.params.id) //Finds the specific ID
+    .then(employee => res.json(employee)) //Return entry as json 
+    .catch(err => res.status(400).json('Error: ' + err)); //Else return error
+});
 
 module.exports = router;

@@ -6,7 +6,7 @@ const shiftSchema = new Schema({
   date: { type: Date, required: true },
   clockIn: { type: Date, required: true },
   clockOut: { type: Date, required: true },
-  missed: { type: boolean, required: true },
+  missed: { type: String, required: true },
 });
 
 // "Shift" will contain the above variables in the mongoDB

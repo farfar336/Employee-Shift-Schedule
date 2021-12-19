@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-// import axios from 'axios';
+import axios from 'axios';
 
 export default class ShiftsList extends Component {
   constructor(props) {
@@ -7,13 +7,29 @@ export default class ShiftsList extends Component {
 
     this.state = {
       firstName: '',
+      lastName: ''
     }
+  }
+  
+  componentDidMount() {
+    axios.get('http://localhost:5000/employees/'+this.props.match.params.id)
+      .then(response => {
+        //   Change fields to new values
+        this.setState({
+          firstName: response.data.firstName,
+          lastName: response.data.lastName
+        })   
+      })
+      .catch(function (error) {
+        console.log(error);
+      })
+
   }
 
   render() {
     return (
       <div>
-        <h3>{this.state.firstName} Shifts</h3>
+        <h3>{this.state.firstName} {this.state.lastName}'s Shifts</h3>
         <table className="table">
           <thead className="thead-light">
             <tr>
