@@ -7,14 +7,18 @@ export default class ShiftsList extends Component {
 
     this.state = {
       firstName: '',
-      lastName: ''
+      lastName: '',
+      shifts: [
+        { date: "October 1", clockIn: '4 am', clockOut: '10 am', missed: 'Yes' },
+        { date: "October 2", clockIn: '4 am', clockOut: '10 am', missed: 'No' }
+      ]   
     }
   }
   
+  // Retrieve info to be displayed later
   componentDidMount() {
     axios.get('http://localhost:5000/employees/'+this.props.match.params.id)
       .then(response => {
-        //   Change fields to new values
         this.setState({
           firstName: response.data.firstName,
           lastName: response.data.lastName
@@ -24,6 +28,13 @@ export default class ShiftsList extends Component {
         console.log(error);
       })
 
+  }
+
+  shiftsList(){
+    return this.state.shifts.map((shift) => (
+      <p>{shift.id} {shift.clockIn} {shift.clockOut} {shift.missed}</p>
+     ) 
+    )
   }
 
   render() {
@@ -40,8 +51,7 @@ export default class ShiftsList extends Component {
             </tr>
           </thead>
           <tbody>
-              {/* { this.employeeList() } */}
-              {/* Body */}
+              { this.shiftsList() }
             </tbody>
         </table>
       </div>

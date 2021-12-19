@@ -8,7 +8,8 @@ const employeeSchema = new Schema({
   firstName: { type: String, required: true },
   lastName: { type: String, required: true },
   position: { type: String, required: true },
-  // shifts: [{ type: Schema.type.ObjectID, required: true,  ref: "Shift" }], //Array of shifts
+  // shifts: { type: Schema.type.ObjectID, required: true,  ref: "Shift" }, //Array of shifts
+  shifts: [{ type: String, required: true }] //Array of shifts
 });
 
 // "Employee" will contain the above variables in the mongoDB
