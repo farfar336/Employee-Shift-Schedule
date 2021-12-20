@@ -13,7 +13,7 @@
 4. In a second terminal, run npm start
 
 If it ran correctly, the following website should be opened:
-![image](https://user-images.githubusercontent.com/44077833/146712961-5776e186-c276-419e-bf0f-8b6893642823.png)
+![image](https://user-images.githubusercontent.com/44077833/146713294-b87a50e2-18e0-4146-8f3d-d24f5ae55202.png)
 
 
 Note: If errors are encountered, try installing the missing package using npm install -[package name]
