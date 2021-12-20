@@ -1,13 +1,10 @@
 **Assumptions**
-1. If clock in time is equal to clock out time, then that employee has missed their shift
+- If clock in time is equal to clock out time, then that employee has missed their shift
 
 **Technologies Used**
-
-Language: Javascript
-
-Framework: NodeJS, ReactJS
-
-Database: MongoDB
+- Language: Javascript
+- Framework: NodeJS, ReactJS
+- Database: MongoDB
 
 **How to run**
 Step 1: Clone this repository https://github.com/farfar336/Employee-Shift-Schedule
