@@ -1,5 +1,5 @@
 **Assumptions**
--If clock in time is equal to clock out time, then that employee has missed their shift
+1. If clock in time is equal to clock out time, then that employee has missed their shift
 
 **Technologies Used**
 -Language: Javascript
