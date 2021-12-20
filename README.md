@@ -18,5 +18,11 @@ If it ran correctly, the following website should be opened:
 
 Note: If errors are encountered, try installing the missing package using npm install -[package name]
 
+In the case it was not possible to run it, here it is deployed:
+https://employee-shift-schedule.vercel.app/
+
 **Video demo**
+
+
+https://user-images.githubusercontent.com/44077833/146713934-7bff2845-f4c5-46dd-ba16-bd109f1e26cb.mp4
 
