@@ -4,7 +4,9 @@
 **Technologies Used**
 
 Language: Javascript
+
 Framework: NodeJS, ReactJS
+
 Database: MongoDB
 
 **How to run**
