@@ -2,6 +2,7 @@
 1. If clock in time is equal to clock out time, then that employee has missed their shift
 
 **Technologies Used**
+
 Language: Javascript
 Framework: NodeJS, ReactJS
 Database: MongoDB
