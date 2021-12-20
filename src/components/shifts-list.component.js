@@ -1,17 +1,23 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import moment from 'moment'
+
+const Shift = props => (
+  <tr>
+    <td>{moment(props.shift.date).utcOffset('-00:00').format('YYYY-MM-DD')}</td> 
+    <td>{moment(props.shift.clockIn).utcOffset('-00:00').format('hh:mm:ss a')}</td>
+    <td>{moment(props.shift.clockOut).utcOffset('-00:00').format('hh:mm:ss a')}</td>
+    <td>{props.shift.missed}</td>
+  </tr>
+)
 
 export default class ShiftsList extends Component {
   constructor(props) {
     super(props);
-
     this.state = {
       firstName: '',
       lastName: '',
-      shifts: [
-        { date: "October 1", clockIn: '4 am', clockOut: '10 am', missed: 'Yes' },
-        { date: "October 2", clockIn: '4 am', clockOut: '10 am', missed: 'No' }
-      ]   
+      shifts: [] 
     }
   }
   
@@ -21,21 +27,21 @@ export default class ShiftsList extends Component {
       .then(response => {
         this.setState({
           firstName: response.data.firstName,
-          lastName: response.data.lastName
+          lastName: response.data.lastName,
+          shifts: response.data.shifts
         })   
       })
       .catch(function (error) {
         console.log(error);
       })
-
   }
 
-  shiftsList(){
-    return this.state.shifts.map((shift) => (
-      <p>{shift.id} {shift.clockIn} {shift.clockOut} {shift.missed}</p>
-     ) 
-    )
-  }
+    // Returns a list of all shifts
+    shiftsList() {
+      return this.state.shifts.map(currentshift => {
+        return <Shift shift={currentshift} key={currentshift._id}/>;
+      })
+    }
 
   render() {
     return (

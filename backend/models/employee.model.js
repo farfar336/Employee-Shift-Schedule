@@ -1,15 +1,18 @@
 // Used for connecting to mongoose
 const mongoose = require('mongoose');
-const Shift = require('./shift.model');
 const Schema = mongoose.Schema;
 
 const employeeSchema = new Schema({
-  employeeID: { type: String, unique: true, required: true },
-  firstName: { type: String, required: true },
-  lastName: { type: String, required: true },
-  position: { type: String, required: true },
-  // shifts: { type: Schema.type.ObjectID, required: true,  ref: "Shift" }, //Array of shifts
-  shifts: [{ type: String, required: true }] //Array of shifts
+  employeeID: {type: String, unique: true},
+  firstName: {type: String},
+  lastName: {type: String },
+  position: {type: String},
+  shifts: [{
+    date: {type: Date},
+    clockIn: {type: Date},
+    clockOut: {type: Date},
+    missed: {type: String}
+  }]
 });
 
 // "Employee" will contain the above variables in the mongoDB
