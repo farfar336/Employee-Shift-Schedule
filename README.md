@@ -27,5 +27,6 @@ https://employee-shift-schedule.vercel.app/
 https://user-images.githubusercontent.com/44077833/146713934-7bff2845-f4c5-46dd-ba16-bd109f1e26cb.mp4
 
 This is what the mongoDB databse looks like:
+
 ![image](https://user-images.githubusercontent.com/44077833/146716985-6b916eb1-c4dd-46e6-9e6f-5a7220a1035e.png)
 
